@@ -6,23 +6,42 @@
   box-shadow: var(--box-shadow-dark);
 }
 
+/*--------------------------*/
+/* Header */
+/*--------------------------*/
 .header {
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+/*End of Header */
 
+/*--------------------------*/
+/* Main content */
+/*--------------------------*/
 .content {
   display: flex;
 }
+/* End of Content */
 
+/*--------------------------*/
+/* Sidebar */
+/*--------------------------*/
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
 }
+/* End of sidebar */
 
+/*--------------------------*/
+/* Hotel-view*/
+/*--------------------------*/
 .hotel-view {
   background-color: #fff;
   background-color: orangered;
   flex-grow: 1;
 }
+/* End of Hotel-view*/
