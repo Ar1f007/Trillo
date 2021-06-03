@@ -33,6 +33,9 @@
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 /* End of sidebar */
 
@@ -42,6 +45,7 @@
 .hotel-view {
   background-color: #fff;
   background-color: orangered;
+  height: 80rem;
   flex-grow: 1;
 }
 /* End of Hotel-view*/
