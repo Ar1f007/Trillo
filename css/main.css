@@ -13,6 +13,8 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --box-shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --box-shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--color-grey-light-2);
 }
 
 *,
@@ -278,10 +280,230 @@ body {
   padding: 2.5rem;
 }
 
+/* End of Navbar */
+/*--------------------------*/
+/* Hotel View */
+/*--------------------------*/
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
+.overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: var(--line);
+}
+
+.overview__heading {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 1.5rem 3rem;
+}
+
+.overview__stars {
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overview__icon-star, .overview__icon-location {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--color-primary);
+}
+
+.overview__icon-location {
+  margin-right: 0.5rem;
+}
+
+.overview__location {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview__rating {
+  background-color: var(--color-primary);
+  margin-left: 2rem;
+  color: #fff;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.25rem;
+}
+
+.overview__rating-average {
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-bottom: -3px;
+}
+
+.overview__rating-count {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  padding-bottom: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.btn-inline:hover {
+  color: var(--color-grey-dark-1);
+}
+
+.btn-inline:focus {
+  outline: none;
+  -webkit-animation: pulsate 1s infinite;
+          animation: pulsate 1s infinite;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+/* Description */
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.list {
+  margin: 3rem 0;
+  padding: 3rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+}
+
+.list__item::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+  background-color: var(--color-primary);
+  -webkit-mask-image: url(../img/chevron-thin-right.svg);
+          mask-image: url(../img/chevron-thin-right.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+
+.recommend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recommend__count {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-2);
+  margin-right: auto;
+}
+
+.recommend__photo {
+  width: 4rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.recommend__photo:not(:first-of-type) {
+  margin-left: -1.5rem;
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  height: 50rem;
   background-color: var(--color-grey-light-1);
   -webkit-box-shadow: var(--box-shadow-dark);
           box-shadow: var(--box-shadow-dark);
@@ -293,7 +515,7 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,12 +564,39 @@ body {
 /*--------------------------*/
 .hotel-view {
   background-color: #fff;
-  background-color: orangered;
-  height: 80rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
 /* End of Hotel-view*/
+/*--------------------------*/
+/* Detail */
+/*--------------------------*/
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  background-color: #fff;
+  -webkit-box-shadow: var(--box-shadow-light);
+          box-shadow: var(--box-shadow-light);
+  margin-right: 4.5rem;
+  padding: 3rem;
+  font-size: 1.4rem;
+}
+
+.user-reviews {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 /*# sourceMappingURL=main.css.map */
